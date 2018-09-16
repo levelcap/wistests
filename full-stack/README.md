@@ -1,24 +1,24 @@
+
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails 5 application that takes a list of people via file upload, parses them, persists them to a database, and displays them in a sortable table on a web page.
 
-Things you may want to cover:
+## Setup
+This project requires Ruby, Rails and SQLite
 
-* Ruby version
+ - Check your SQLite version: `sqlite3 --version`. If it is not installed, follow the instructions on the SQLite site: https://www.sqlite.org/index.html
+ - Install Rails by running `gem install rails`
+ - Check your Rails version by running `rails --version`
+ - Install Ruby bundles by running `bundle install` in the `full-stack/` directory.
 
-* System dependencies
+## Running
 
-* Configuration
+ - The application will run at http://localhost:3000 by default. You can change this by either modifying the default value in `full-stack/config/puma.rb` or by setting the `PORT` environmental variable.
+ - Start the application by running `rails server` in the `full-stack/` directory
+ - You can find test files for upload in `full-stack/test/fixtures/files/`
 
-* Database creation
+## Testing
+- Tests can be found in `full-stack/test/`
+- Start tests by running `rails test`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Project Breakdown
