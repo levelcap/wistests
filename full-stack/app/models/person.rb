@@ -1,5 +1,6 @@
 class Person < ApplicationRecord
   def self.uploadToPeople(people_list_string)
+    errors = Array.new
     if people_list_string.include? "|"
       parser = PipePeopleParser.new
     elsif people_list_string.include? ","
@@ -8,7 +9,11 @@ class Person < ApplicationRecord
       parser = SpacePeopleParser.new
     end
     people_list_string.each_line do |line|
-      parser.parseLine(line.strip)
+      begin
+        parser.parseLine(line.strip)
+      rescue StandardError => e
+        errors.push(message)
+      end
     end
   end
 end

@@ -1,10 +1,13 @@
 class CommaPeopleParser < PeopleParser
   def getDelimiter
-    return " "
+    return ","
   end
 
   def splitAndParseLine(line)
     splitString = line.split(getDelimiter)
+    if (splitString.length < 5)
+      raise line + " must have 5 parameters"
+    end
     @last_name = splitString[0]
     @first_name = splitString[1]
     @middle_initial = ""

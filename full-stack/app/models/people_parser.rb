@@ -18,7 +18,7 @@ class PeopleParser
       :pet => @pet,
       :dob => @dob,
       :favorite_color => @favorite_color)
-    Rails.logger.info(newPerson)
+    return newPerson
   end
 
   def getDelimiter

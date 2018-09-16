@@ -5,6 +5,9 @@ class PipePeopleParser < PeopleParser
 
   def splitAndParseLine(line)
     splitString = line.split(getDelimiter)
+    if (splitString.length < 6)
+      raise line + " must have 6 parameters"
+    end
     @first_name = splitString[0]
     @last_name = splitString[1]
     @middle_initial = splitString[2]
