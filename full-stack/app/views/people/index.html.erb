@@ -6,3 +6,28 @@
   <%= file_field_tag 'people_upload' %>
   <%= submit_tag("Upload") %>
 <% end %>
+
+<table id="people-table">
+  <thead>
+    <tr>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Middle Initial</th>
+      <th>Pet</th>
+      <th>Birthday</th>
+      <th>Favorite Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.first_name %></td>
+        <td><%= person.last_name %></td>
+        <td><%= person.middle_initial %></td>
+        <td><%= person.pet %></td>
+        <td><%= person.dob %></td>
+        <td><%= person.favorite_color %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  last_name: MyString
-  first_name: MyString
-  middle_initial: MyString
-  pet: MyString
-  dob: MyString
-  favorite_color: MyString
+  last_name: "Test"
+  first_name: "Guy"
+  middle_initial: "A"
+  pet: "Cat"
+  dob: "1/1/1990"
+  favorite_color: "Blue"
 
 two:
-  last_name: MyString
-  first_name: MyString
-  middle_initial: MyString
-  pet: MyString
-  dob: MyString
-  favorite_color: MyString
+  last_name: "Tester"
+  first_name: "Gal"
+  middle_initial: "B"
+  pet: "Dog"
+  dob: "12/31/1989"
+  favorite_color: "Turquoise"

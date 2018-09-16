@@ -11,7 +11,7 @@ class PeopleParser
   def parseLine(line)
     splitAndParseLine(line)
     parseParams()
-    newPerson = Person.new(
+    newPerson = Person.create(
       :first_name => @first_name,
       :last_name => @last_name,
       :middle_initial => @middle_initial,

@@ -15,5 +15,6 @@ class Person < ApplicationRecord
         errors.push(message)
       end
     end
+    return errors
   end
 end
