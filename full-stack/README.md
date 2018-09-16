@@ -10,6 +10,7 @@ This project requires Ruby, Rails and SQLite
  - Install Rails by running `gem install rails`
  - Check your Rails version by running `rails --version`
  - Install Ruby bundles by running `bundle install` in the `full-stack/` directory.
+ - Migrate to the latest db by running `rails db:migrate`
 
 ## Running
 
