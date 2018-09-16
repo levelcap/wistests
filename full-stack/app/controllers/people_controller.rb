@@ -1,4 +1,5 @@
 class PeopleController < ApplicationController
+  # TODO: Paginate requests rather than returning the entire table
   def index
     @people = Person.all
   end

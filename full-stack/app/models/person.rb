@@ -1,4 +1,5 @@
 class Person < ApplicationRecord
+  # Takes a multi-line string input and attemps to parse it into Person models
   def self.uploadToPeople(people_list_string)
     response = {
       :people => Array.new,

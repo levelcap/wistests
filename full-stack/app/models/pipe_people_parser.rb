@@ -1,4 +1,4 @@
-class PipePeopleParser < PeopleParser
+class PipePeopleParser < BasePeopleParser
   def getDelimiter
     return "|"
   end

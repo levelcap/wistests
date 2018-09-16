@@ -1,4 +1,5 @@
-class PeopleParser
+# Base class with a default implementation of string-to-Person parsing
+class BasePeopleParser
   def initialize
     @first_name = ""
     @last_name = ""
@@ -8,6 +9,9 @@ class PeopleParser
     @favorite_color = ""
   end
 
+  # Takes a string, splits it based on the given delimter and applies any special parameter
+  # parsing rules (i.e. dates should be slash-delimited instead of hyphenated), the creates
+  # a new Person in sqlite
   def parseLine(line)
     splitAndParseLine(line)
     parseParams()

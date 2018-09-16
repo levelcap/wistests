@@ -1,4 +1,4 @@
-class CommaPeopleParser < PeopleParser
+class CommaPeopleParser < BasePeopleParser
   def getDelimiter
     return ","
   end

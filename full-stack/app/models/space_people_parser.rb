@@ -1,4 +1,4 @@
-class SpacePeopleParser < PeopleParser
+class SpacePeopleParser < BasePeopleParser
   def getDelimiter
     return " "
   end
