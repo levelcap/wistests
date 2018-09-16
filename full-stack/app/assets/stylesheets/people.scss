@@ -96,4 +96,11 @@ form {
     height: 49px;
     border-bottom: 1px solid #e6e7e8;
   }
+  .pet-image {
+    width: 15px;
+  }
+  .no-pet {
+    color: $muted;
+    font-style: italic;
+  }
 }

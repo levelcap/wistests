@@ -4,6 +4,15 @@ $(document).ready(function () {
     "info": false,
     "searching": false,
     "columnDefs": [
+      {
+        "type": "html", "targets": 3, "render": function (data, type, row) {
+          if (data === 'None') {
+            return "<span class='no-pet'>" + data + "</span>"
+          } else {
+            return "<img class='pet-image' src='/assets/" + data.toLowerCase() + ".png'/> " + data;
+          }
+        }
+      },
       { "type": "date", "targets": 4 }
     ]
   });
