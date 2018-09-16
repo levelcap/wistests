@@ -11,15 +11,15 @@ class PipePeopleParserTest < ActiveSupport::TestCase
   end
 
   test "PipePeopleParser returns a Person when passed a valid string" do
-    testString = "Dave|Cohen|S|Both|4-23-1982|Green"
+    testString = "Evelo|Dalila|G|None|Blue|6-3-1968"
     parser = PipePeopleParser.new
     person = parser.parseLine(testString)
-    assert_equal("Dave", person.first_name)
-    assert_equal("Cohen", person.last_name)
-    assert_equal("S", person.middle_initial)
-    assert_equal("Both", person.pet)
-    assert_equal("4/23/1982", person.dob)
-    assert_equal("Green", person.favorite_color)
+    assert_equal("Dalila", person.first_name)
+    assert_equal("Evelo", person.last_name)
+    assert_equal("G", person.middle_initial)
+    assert_equal("None", person.pet)
+    assert_equal("6/3/1968", person.dob)
+    assert_equal("Blue", person.favorite_color)
   end
 
 end

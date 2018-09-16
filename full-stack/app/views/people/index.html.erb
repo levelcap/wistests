@@ -1,9 +1,14 @@
-<h1>People#index</h1>
-<p>Find me in app/views/people/index.html.erb</p>
-
-
+<h1>
+  <%= @people.length %> People
+</h1>
 <%= form_tag({action: :upload}, multipart: true) do %>
-  <%= file_field_tag 'people_upload' %>
+  <label for="file_name" class="file_name_label">Import a file</label>
+  <div class="upload-container">
+    <%= text_field_tag 'file_name', nil, class: 'file_name', disabled: true %>
+    <%= file_field_tag 'people_upload', class: 'people_upload' %>
+    <label for="people_upload">Browse</label>
+  </div>
+  <br/>
   <%= submit_tag("Upload") %>
 <% end %>
 

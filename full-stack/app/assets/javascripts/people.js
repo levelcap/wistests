@@ -1,4 +1,10 @@
-console.log('people! so many people!')
 $(document).ready(function () {
-  $("#people-table").dataTable();
+  $("#people-table").dataTable({
+    "paging": false,
+    "ordering": false,
+    "info": false,
+    "searching": false,
+  });
+
+  $("")
 });

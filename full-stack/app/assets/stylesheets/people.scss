@@ -1,3 +1,87 @@
-// Place all the styles related to the People controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$best-blue: #54bbff;
+$muted: #a7a9ac;
+$table-border: #e6e7e8;
+
+body {
+  font-family: 'Arial';
+  margin: 20px;
+  color: #363945;
+}
+
+h1 {
+  font-size: 25px;
+  padding-left: 18px;
+  margin: 15px 0 15px 0;
+  float: left;
+}
+
+form {
+  float: right;
+  margin: 15px 0 15px 0;
+
+  .file_name_label {
+    color: $muted;
+  }
+
+  .upload-container {
+    width: 430px;
+    display: inline-block;
+
+    .file_name {
+      font-size: 13px;
+      margin: 0px;
+      padding: 10px 0 10px 0;
+      width: 420px;
+    }
+
+    .people_upload {
+	    width: 0.1px;
+	    height: 0.1px;
+	    opacity: 0;
+	    overflow: hidden;
+	    position: absolute;
+	    z-index: -1;
+    }
+
+    .people_upload + label {
+      background-color: $best-blue;
+      border-radius: 0 4px 4px 0;
+      color: white;
+      font-size: 15px;
+      padding: 11px 0 11px 0;
+      width: 110px;
+      margin-left: -110px;
+      display: inline-block;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+}
+
+#people-table {
+  font-size: 15px;
+
+  thead {
+    text-align: left;
+    font-weight: normal !important;
+    color: $muted;
+  }
+  thead .sorting_asc {
+    background-image: image-url("sort-asc.png");
+    background-size: 15px;
+    color: $best-blue;
+    font-weight: bold;
+  }
+  thead .sorting_desc {
+    background-image: image-url("sort-desc.png");
+    background-size: 15px;
+    color: $best-blue;
+    font-weight: bold;
+  }
+  td, th {
+    font-weight: normal;
+    padding: 0px 18px;
+    height: 49px;
+    border-bottom: 1px solid #e6e7e8;
+  }
+}
