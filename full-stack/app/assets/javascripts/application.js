@@ -14,5 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery
+//= require jquery.form
 //= require datatables
 //= require_tree .

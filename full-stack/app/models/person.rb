@@ -1,6 +1,10 @@
 class Person < ApplicationRecord
   def self.uploadToPeople(people_list_string)
-    errors = Array.new
+    response = {
+      :people => Array.new,
+      :errors => Array.new
+    }
+
     if people_list_string.include? "|"
       parser = PipePeopleParser.new
     elsif people_list_string.include? ","
@@ -10,11 +14,12 @@ class Person < ApplicationRecord
     end
     people_list_string.each_line do |line|
       begin
-        parser.parseLine(line.strip)
+        person = parser.parseLine(line.strip)
+        response[:people].push(person)
       rescue StandardError => e
-        errors.push(message)
+        response[:errors].push(e.message)
       end
     end
-    return errors
+    return response
   end
 end

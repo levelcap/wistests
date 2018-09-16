@@ -1,10 +1,11 @@
 $best-blue: #54bbff;
 $muted: #a7a9ac;
 $table-border: #e6e7e8;
+$error-red: #ff4949;
 
 body {
   font-family: 'Arial';
-  margin: 20px;
+  margin: 50px;
   color: #363945;
 }
 
@@ -13,6 +14,16 @@ h1 {
   padding-left: 18px;
   margin: 15px 0 15px 0;
   float: left;
+}
+
+#error-list {
+  position: relative;
+  clear: both;
+  width: 100%;
+  padding: 20px;
+  background-color: #ff4949;
+  color: white;
+  display: none;
 }
 
 form {
@@ -30,8 +41,8 @@ form {
     .file_name {
       font-size: 13px;
       margin: 0px;
-      padding: 10px 0 10px 0;
-      width: 420px;
+      padding: 10px 0 10px 10px;
+      width: 410px;
     }
 
     .people_upload {
@@ -60,6 +71,7 @@ form {
 
 #people-table {
   font-size: 15px;
+  border: 0;
 
   thead {
     text-align: left;

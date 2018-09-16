@@ -6,6 +6,7 @@ class PeopleController < ApplicationController
   def upload
     people_upload = params[:people_upload]
     people_list_string = people_upload.read.to_s
-    Person.uploadToPeople(people_list_string)
+    people = Person.uploadToPeople(people_list_string)
+    render :json => people
   end
 end

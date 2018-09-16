@@ -1,17 +1,17 @@
 <h1>
   <%= @people.length %> People
 </h1>
-<%= form_tag({action: :upload}, multipart: true) do %>
+<%= form_tag({action: :upload}, multipart: true, id: 'people_form') do %>
   <label for="file_name" class="file_name_label">Import a file</label>
   <div class="upload-container">
     <%= text_field_tag 'file_name', nil, class: 'file_name', disabled: true %>
     <%= file_field_tag 'people_upload', class: 'people_upload' %>
     <label for="people_upload">Browse</label>
   </div>
-  <br/>
-  <%= submit_tag("Upload") %>
 <% end %>
 
+<div id="error-list">
+</div>
 <table id="people-table">
   <thead>
     <tr>

@@ -39,4 +39,18 @@ class PersonTest < ActiveSupport::TestCase
 
     assert_mock mock
   end
+
+  test "PipePeopleParser returns two people and one error for input with one bad row" do
+    testString = "one|two|three|four|five|six\nbadlyformattedrow\none|two|three|four|five|six"
+    response = Person.uploadToPeople(testString)
+    assert_equal(response[:people].length, 2)
+    assert_equal(response[:errors].length, 1)
+  end
+
+  test "CommaPeopleParser returns two errors for two bad rows" do
+    testString = "one|two|three\nbadrowdifferentformat"
+    response = Person.uploadToPeople(testString)
+    assert_equal(response[:people].length, 0)
+    assert_equal(response[:errors].length, 2)
+  end
 end
