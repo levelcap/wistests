@@ -1,5 +1,5 @@
 <h1>
-  <%= @people.length %> People
+  <span id="num-people"><%= @people.length %></span> People
 </h1>
 <%= form_tag({action: :upload}, multipart: true, id: 'people_form') do %>
   <label for="file_name" class="file_name_label">Import a file</label>

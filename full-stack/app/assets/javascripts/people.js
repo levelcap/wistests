@@ -39,6 +39,7 @@ $(document).ready(function () {
             person.favorite_color
           ]).draw(true);
         });
+        $('#num-people').text(peopleTable.rows().count());
       }
     }, error: function (error) {
       console.log(error);
